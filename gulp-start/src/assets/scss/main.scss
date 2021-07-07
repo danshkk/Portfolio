@@ -1,6 +1,65 @@
+@import './abstracts/vars';
+@import './abstracts/mixins';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    background-color: rgb(37, 37, 37);
-    color: white;
+    background-color: $mainColor;
+    @include font('Heebo', $colorText, 14px);
 }
 
-@import './blocks/style2'
+.wrapper {
+    border-bottom: $borderDecoration;
+    &__footer {
+        border-bottom: transparent;
+    }
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    border-left: $borderDecoration;
+    border-right: $borderDecoration;
+    overflow: hidden;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: $logoColor
+}
+.btn {
+    @include font('Oswald',$colorText,16px);
+    display: inline-block;
+    height: 50px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(102,102,102,.8);
+    padding: 0 30px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.title {
+    @include font('Oswald', $colorText, 58px);
+}
+.subtitle {
+    @include font('Heebo', #ddd, 18px);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+@import './normalize';
+@import './blocks/header';
+@import './blocks/start-page';
+@import './blocks/about';
+@import './blocks/features';
+@import './blocks/portfolio';
+@import './blocks/contact';
+@import './blocks/footer';

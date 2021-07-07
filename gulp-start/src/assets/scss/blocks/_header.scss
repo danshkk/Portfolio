@@ -1,0 +1,9 @@
+@import '../abstracts/mixins';
+@import '../abstracts/vars';
+
+.header {
+    height: 10vh;
+    border-bottom: $borderDecoration;
+    font-size: 30px;
+    @include flex(space-between, center);
+}

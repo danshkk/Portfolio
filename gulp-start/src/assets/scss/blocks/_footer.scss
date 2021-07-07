@@ -1,0 +1,20 @@
+@import '../abstracts/mixins';
+@import '../abstracts/vars';
+.footer {
+    padding: 40px 0 20px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__logo {
+        margin-bottom: 20px;
+    }
+    &__social {
+        margin-bottom: 15px;
+    }
+    &__rights {
+        @include font('Heebo', #ddd, 14px);
+    }
+}
