@@ -14,6 +14,12 @@
     &__social {
         margin-bottom: 15px;
     }
+    &__item {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
     &__rights {
         @include font('Heebo', #ddd, 14px);
     }
